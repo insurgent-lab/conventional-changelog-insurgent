@@ -45,18 +45,22 @@ function getWriterOpts () {
         commit.type = `Reverts`
       } else if (discard) {
         return
-      } else if (commit.type === `docs`) {
-        commit.type = `Documentation`
-      } else if (commit.type === `style`) {
-        commit.type = `Styles`
+      } else if (commit.type === `improvement`) {
+        commit.type = `Features Improvements`
       } else if (commit.type === `refactor`) {
         commit.type = `Code Refactoring`
-      } else if (commit.type === `test`) {
-        commit.type = `Tests`
+      } else if (commit.type === `docs`) {
+        commit.type = `Documentation`
       } else if (commit.type === `build`) {
         commit.type = `Build System`
       } else if (commit.type === `ci`) {
         commit.type = `Continuous Integration`
+      } else if (commit.type === `test`) {
+        commit.type = `Tests`
+      } else if (commit.type === `style`) {
+        commit.type = `Styles`
+      } else if (commit.type === `chore`) {
+        commit.type = `Codebase Improvements`
       }
 
       if (commit.scope === `*`) {
