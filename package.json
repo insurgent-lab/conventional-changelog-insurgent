@@ -1,6 +1,6 @@
 {
   "name": "conventional-changelog-insurgent",
-  "version": "5.1.6",
+  "version": "5.2.0",
   "description": "conventional-changelog insurgent preset",
   "main": "index.js",
   "scripts": {
