@@ -4,6 +4,8 @@
 
 **Issues with the convention itself should be reported on the Angular issue tracker.**
 
+**This if a fork from [conventional-changelog-angular](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular) at [741e907](https://github.com/conventional-changelog/conventional-changelog/tree/741e90744cdb58e82e71feb36018047d7baca768/packages/conventional-changelog-angular).**
+
 ## Angular Convention
 
 Angular's [commit message guidelines](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit).
