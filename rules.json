@@ -1,0 +1,12 @@
+{
+  "minor": [
+    "feat",
+    "improvement"
+  ],
+  "patch": [
+    "fix",
+    "perf",
+    "task",
+    "build"
+  ]
+}

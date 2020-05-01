@@ -2,17 +2,7 @@
 
 const parserOpts = require(`./parser-opts`)
 
-const minorTypes = [
-  'feat',
-  'improvement'
-]
-
-const patchTypes = [
-  'fix',
-  'perf',
-  'task',
-  'build'
-]
+const rules = require('./rules')
 
 module.exports = {
   parserOpts,
@@ -26,12 +16,14 @@ module.exports = {
       if (commit.notes.length > 0) {
         breakings += commit.notes.length
         level = 0
-      } else if (patchTypes.includes(commit.type)) {
-        level = 2
-      } else if (minorTypes.includes(commit.type)) {
+      } else if (rules.minor.includes(commit.type)) {
         features += 1
         if (level === 2 || level === 3) {
           level = 1
+        }
+      } else if (rules.patch.includes(commit.type)) {
+        if (level === 3) {
+          level = 2
         }
       }
     })
