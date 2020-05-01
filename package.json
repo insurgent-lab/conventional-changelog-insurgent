@@ -4,7 +4,7 @@
   "description": "conventional-changelog insurgent preset",
   "main": "index.js",
   "scripts": {
-    "test-windows": "mocha --timeout 30000"
+    "test": "mocha --timeout 30000"
   },
   "repository": {
     "type": "git",
@@ -35,5 +35,12 @@
   "dependencies": {
     "compare-func": "^1.3.1",
     "q": "^1.5.1"
+  },
+  "devDependencies": {
+    "better-than-before": "^1.0.0",
+    "chai": "^4.2.0",
+    "conventional-changelog-core": "^4.1.4",
+    "git-dummy-commit": "^1.3.0",
+    "mocha": "^7.1.2"
   }
 }
