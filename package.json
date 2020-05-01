@@ -1,6 +1,6 @@
 {
   "name": "conventional-changelog-insurgent",
-  "version": "6.1.0",
+  "version": "6.1.1",
   "description": "conventional-changelog insurgent preset",
   "main": "index.js",
   "scripts": {
@@ -21,6 +21,8 @@
     "index.js",
     "parser-opts.js",
     "writer-opts.js",
+    "rules.json",
+    "release-rules.js",
     "templates"
   ],
   "author": "Steve Mao",
