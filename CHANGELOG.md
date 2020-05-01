@@ -1,5 +1,27 @@
 # Change Log
 
+# 6.0.0 (2020-05-01)
+
+
+### Features
+
+* add `improvement` & `chore` types ([91ac7f2](https://github.com/insurgent-lab/conventional-changelog-insurgent/commit/91ac7f2deef4c7707d0367c12656cb04554f2bb8))
+* add `task` type ([1109a33](https://github.com/insurgent-lab/conventional-changelog-insurgent/commit/1109a3380ac110e0677ae868fb073c0f2746ec1b))
+
+
+### Features Improvements
+
+* update version triggers ([80724da](https://github.com/insurgent-lab/conventional-changelog-insurgent/commit/80724da1fabe536d33411770a1cd6b9cdf9edb04))
+
+
+### BREAKING CHANGES
+
+* `improvement` is now triggering minor
+* `build` is now triggering patch
+* `refactor`, `docs`, `ci`, `test`, `style`, `chore` are now ignored
+
+
+
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
