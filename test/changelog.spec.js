@@ -64,7 +64,7 @@ betterThanBefore.setups([
   }
 ])
 
-describe('angular preset', function () {
+describe('changelog generator', function () {
   it('should work if there is no semver tag', function (done) {
     preparing(1)
 
