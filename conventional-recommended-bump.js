@@ -2,11 +2,23 @@
 
 const parserOpts = require(`./parser-opts`)
 
+const minorTypes = [
+  'feat',
+  'improvement'
+]
+
+const patchTypes = [
+  'fix',
+  'perf',
+  'task',
+  'build'
+]
+
 module.exports = {
   parserOpts,
 
   whatBump: (commits) => {
-    let level = 2
+    let level = 3
     let breakings = 0
     let features = 0
 
@@ -14,13 +26,17 @@ module.exports = {
       if (commit.notes.length > 0) {
         breakings += commit.notes.length
         level = 0
-      } else if (commit.type === `feat`) {
+      } else if (patchTypes.includes(commit.type)) {
+        level = 2
+      } else if (minorTypes.includes(commit.type)) {
         features += 1
-        if (level === 2) {
+        if (level === 2 || level === 3) {
           level = 1
         }
       }
     })
+
+    if (level == 3) return undefined
 
     return {
       level: level,

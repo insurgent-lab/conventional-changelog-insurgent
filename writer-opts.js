@@ -33,8 +33,11 @@ function getWriterOpts () {
         discard = false
       })
 
+      // TODO: Rewrite with case
       if (commit.type === `feat`) {
         commit.type = `Features`
+      } else if (commit.type === `improvement`) {
+        commit.type = `Features Improvements`
       } else if (commit.type === `fix`) {
         commit.type = `Bug Fixes`
       } else if (commit.type === `perf`) {
@@ -43,16 +46,16 @@ function getWriterOpts () {
         commit.type = `Tasks`
       } else if (commit.type === `revert` || commit.revert) {
         commit.type = `Reverts`
+
       } else if (discard) {
         return
-      } else if (commit.type === `improvement`) {
-        commit.type = `Features Improvements`
+
+      } else if (commit.type === `build`) {
+        commit.type = `Build System`
       } else if (commit.type === `refactor`) {
         commit.type = `Code Refactoring`
       } else if (commit.type === `docs`) {
         commit.type = `Documentation`
-      } else if (commit.type === `build`) {
-        commit.type = `Build System`
       } else if (commit.type === `ci`) {
         commit.type = `Continuous Integration`
       } else if (commit.type === `test`) {
